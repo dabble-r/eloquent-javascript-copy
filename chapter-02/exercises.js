@@ -3,24 +3,65 @@
 // triangles ///////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function triangles() {
-
+function triangles(num) {
+  let str = '';
+  let count = 0;
+  while (count < num) {
+    console.log(str += '#');
+    count++;
+  }
 }
+
+/*
 ////////////////////////////////////////////////////////////////////////////////
 // fizzBuzz ////////////////////////////////////////////////////////////////////
+* prints numbers 1 to 100
+* number divisible by 3, print fizz
+* number divisible by 5, print buzz
+* number divisible by 3 and 5, print fizzbuzz
+Input: N/A
+Output: Numbers 1 to 100, 'Fizz' num % 3, 'Buzz', num % 5, 'FizzBuzz, num % 3 && 5
+Constraints: N/A
+Edge Case: N/A
 ////////////////////////////////////////////////////////////////////////////////
+*/
 
 function fizzBuzz() {
-  
+  for ( let i = 1; i <= 15; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log('fizzbuzz');
+    } else if (i % 3 === 0) {
+      console.log('fizz');
+    } else if (i % 5 === 0) {
+      console.log('buzz');
+    } else {
+      console.log(i);
+    }
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 // drawChessboard //////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-function drawChessboard() {
-
-}
+function drawChessboard(size) {
+  let space = ' ';
+  let hash = '#';
+  let board = '';
+  //console.log(size);
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      if ((i + j) % 2 === 0) {
+          board += space;
+      } else {
+          board += hash;
+        }
+    }
+    board = `${board}\n`;
+   }
+  console.log(board);
+  //return board;
+  }
 
 ////////////////////////////////////////////////////////////////////////////////
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
